@@ -1,11 +1,14 @@
 name: first_workflow
-on: workflow_dispatch
+on:
+  workflow_dispatch:   # Manual trigger
+
 jobs:
   first-job:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-20.04  # You can switch to 'ubuntu-22.04' if you want a more up-to-date environment
+
     steps:
-      - name: print hello
+      - name: Print hello
         run: echo "hello."
-      - name: print goodbye
+
+      - name: Print goodbye
         run: echo "good-bye."
-      
